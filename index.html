@@ -161,9 +161,10 @@
 
         <section data-markdown>
           <script type="text/template">
-            ## デモ
+            ## Milkodeデモ
 
-            - Web
+            - Webブラウザから検索
+            - コマンドラインから検索
           </script>
         </section>
 
@@ -200,10 +201,10 @@
 
         <section data-markdown>
           <script type="text/template">
-            ## デモ
+            ## Honyomiデモ
 
-            - 個人の蔵書管理に
-            - 社内文章データベースに
+            - 個人の蔵書管理
+            - 社内文章データベース
           </script>
         </section>
 
@@ -222,6 +223,43 @@
 
             - Groongaのテーブル構築をRubyでもっと簡単に
             - RubyのArrayやHash位簡単に使いたい
+            - Honyomiはgrn_miniを使って書かれている
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## コード例
+
+            ```ruby
+require 'grn_mini'
+GrnMini::create_or_open("test.db")
+
+hash = GrnMini::Hash.new
+hash["a"] = {text:"aaa", number:1}
+hash["b"] = {text:"bbb", number:2}
+hash["c"] = {text:"ccc", number:3}
+
+# Read & Write
+hash["b"].text #=> "bbb"
+hash["b"].text = "BBB"
+
+# Search
+results = array.select("text:@bb")
+results.each do |record|
+  p record.attributes #=> {text: "BBB", number: 2}
+end
+            ```
+
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## もっと知りたい
+
+            [README](https://github.com/ongaeshi/grn_mini)をどうぞ
+
           </script>
         </section>
 
@@ -287,10 +325,9 @@
 
         <section data-markdown>
           <script type="text/template">
-            ## デモ
+            ## gem-codesearchデモ
 
-            - コマンドラインで検索
-            - Webから検索
+            - Rails の ActiveSupport#blank? を探す
           </script>
         </section>
 
