@@ -76,7 +76,45 @@
 
         <section data-markdown>
           <script type="text/template">
+            ## カラムストア機能付き<br/>全文検索エンジン
+            
+            - 日本語を含む文章を高速に検索出来る
+            - ストレージ機能付きなのでMySQLなどが別途不要
+            - (連携も出来ます、Mroongaとか)
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
             # Rroongaとは？
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## Groongaの<br/>Rubyバインディング
+
+            - RubyからGroongaデータベースにアクセス出来る
+            - 'gem install rroonga' でGroongaもまとめてインストール
+            - Windowsにも簡単にインストール出来る
+              - バイナリ付きgemを配布してくれている
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## このような特性を持つため
+
+            - 全文検索機能付きの
+            - ライブラリや、アプリケーションを
+            - gemで簡単に配布出来る
+            - 全文検索が付いたSQLite3として使う
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            # 作ったもの
           </script>
         </section>
 
@@ -84,6 +122,45 @@
           <script type="text/template">
             # Milkode
             ## ソースコード検索エンジン
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## ソースコードに特化した<br/>検索エンジン
+
+            ![milkode](image/milkode-demo.jpg)
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## 概要
+            
+            - ソースコードを登録
+              - ローカルディレクトリ
+              - git, svn
+              - GitHubレポジトリ
+            - 高速に検索
+              - コマンドライン
+              - Webアプリ
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## 特徴
+
+            - 高速 (100,000ファイル位であれば1〜2秒以内で検索)
+            - 行指向 (AND検索)
+            - エディタでもブラウザでも
+            - パッケージ名、拡張子、ディレクトリ名でドリルダウン
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            # デモ
           </script>
         </section>
 
@@ -159,6 +236,12 @@ end
             ```
 
             参考: [Milkodeで作ったデータベースをRroongaで開いて簡単に全文検索する](http://ongaeshi.hatenablog.com/entry/milkode-and-rroonga)
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## デモ
           </script>
         </section>
 
