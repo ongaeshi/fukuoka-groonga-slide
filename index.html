@@ -211,8 +211,71 @@
 
         <section data-markdown>
           <script type="text/template">
+            # Rroongaの場合
+
+            - テーブル、カラム、インデックス属性を設定する必要がある
+            - RubyのArrayやHash位簡単に使いたい
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
             ## gem-codesearch
             ### RubyGemsの全ソースを全文検索可能に
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## これは何？
+
+            Rubyコミッタの[@akr](http://www.a-k-r.org/d/)さんが作っている
+            
+            - 全gemをミラー
+            - 最新のgemをunpack
+            - 全てMilkodeに登録
+            - RubyGemsの全ソースから全文検索
+
+            <br/>
+            というお化けツール。<br/>
+            一部Rubyコミッタの方々に使われている模様。<br/>
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## やってみた
+
+            - 全部で300GB位ディスク容量が必要
+            - 1〜2日かかる
+            - ちょっとだけ改造
+              - 最新のgemのみダウンロード
+              - ネットワーク帯域節約
+              - そのうちプルリクするかも
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## 実行結果
+
+            2014/01/11 現在のデータ
+
+            - gem
+              - 91,959個 (19.32GB)
+            - 展開後
+              - 5,000,000ファイル (43.05GB)
+            - Milkodeデータベース
+              - 100 GB
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## デモ
+
+            - コマンドラインで検索
+            - Webから検索
           </script>
         </section>
 
@@ -267,12 +330,6 @@ end
             ```
 
             参考: [Milkodeで作ったデータベースをRroongaで開いて簡単に全文検索する](http://ongaeshi.hatenablog.com/entry/milkode-and-rroonga)
-          </script>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## デモ
           </script>
         </section>
 
